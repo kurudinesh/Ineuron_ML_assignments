@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict house value</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="crim" id="crim" placeholder="per capita crime rate by town">
+            <input type="number" name="zn" id="zn" placeholder="proportion of residential land zoned for lots over 25,000 sq.ft.">
+            <input type="number" name="lstat" id="university_rating" placeholder="% lower status of the population">
+            <input type="number" name="rm" id="sop" placeholder="average number of rooms per dwelling">
+<!--            <select name="research" id="research">-->
+<!--  <option value="yes">Yes</option>-->
+<!--  <option value="no">No</option>-->
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+**/.ipynb_checkpoints
+**/.idea
+ml project/database.sqlite
+ml project/database.sqlite.zip
+rasa/*
+**/data_stocks.csv
+
+ml combined/part1/nba_2013.csv
+ImageScrapper/*

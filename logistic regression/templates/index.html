@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict affair status</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+<!--            <input type="number" name="crim" id="occ" placeholder="occ" value="0">-->
+            <label for="occupation">Occupation:</label>
+            <select name="occ" id="occupation">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select><br><br>
+<!--            <input type="number" name="crim" id="occ_3" placeholder="occ_3" value="0">-->
+<!--            <input type="number" name="crim" id="occ_4" placeholder="occ_4" value="0">-->
+<!--            <input type="number" name="crim" id="occ_5" placeholder="occ_5" value="0">-->
+<!--            <input type="number" name="occ_husb" id="occ_6" placeholder="occ_6" value="0">-->
+<!--            <input type="number" name="crim" id="occ_husb" placeholder="occ_husb" value="0">-->
+            <label for="husband_occupation">Husband Occupation:</label>
+            <select name="occ_husband" id="husband_occupation">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select><br><br>
+                <!--            <input type="number" name="crim" id="occ_husb_3" placeholder="occ_husb_3" value="0">-->
+<!--            <input type="number" name="crim" id="occ_husb_4" placeholder="occ_husb_4">-->
+<!--            <input type="number" name="crim" id="occ_husb_5" placeholder="occ_husb_5">-->
+<!--            <input type="number" name="occ_husb" id="occ_husb_6" placeholder="occ_husb_6">-->
+            <input type="number" name="rate_marriage" id="rate_marriage" placeholder="rate_marriage">
+            <input type="number" name="age" id="age" placeholder="age">
+            <input type="number" name="yrs_married" id="yrs_married" placeholder="yrs_married">
+            <input type="number" name="children" id="children" placeholder="children">
+            <input type="number" name="religious" id="religious" placeholder="religious">
+            <input type="number" name="educ" id="educ" placeholder="educ">
+<!--            <select name="research" id="research">-->
+<!--  <option value="yes">Yes</option>-->
+<!--  <option value="no">No</option>-->
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
